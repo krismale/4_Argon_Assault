@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4990607877152018}
   - component: {fileID: 33830965679388596}
   - component: {fileID: 23413581245250402}
+  - component: {fileID: 4285667896310493802}
   m_Layer: 0
   m_Name: Ship_03
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1074994750746910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.7287916}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 20.000011, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,3 +79,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4285667896310493802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074994750746910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349876f1f51b0064397ccc2b5b6f63a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 5360440223220234926, guid: 047f2a083560fb94aad8b90684fc4f8f,
+    type: 3}
+  explosionParent: {fileID: 0}
