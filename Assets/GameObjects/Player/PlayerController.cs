@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float positionYawFactor = 4.5f;
     [SerializeField] float throwTilt = 15f;
 
+    [Header("Shooting related")]
+    [SerializeField] ParticleSystem[] bulletsSystem;
+
     bool disableInput = false;
 
     // Update is called once per frame
@@ -28,6 +31,28 @@ public class PlayerController : MonoBehaviour
             float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
             ProcessTranslation(xThrow, yThrow);
             ProcessRotation(xThrow, yThrow);
+
+            ProcessShooting();
+        }
+    }
+
+    private void ProcessShooting()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Shoot"))
+        {
+            foreach (ParticleSystem bulletSystem in bulletsSystem)
+            {
+                bulletSystem.Play();
+
+            }
+        }
+        if (CrossPlatformInputManager.GetButtonUp("Shoot"))
+        {
+            foreach (ParticleSystem bulletSystem in bulletsSystem)
+            {
+                bulletSystem.Stop();
+
+            }
         }
     }
 
